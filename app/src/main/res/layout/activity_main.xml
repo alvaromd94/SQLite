@@ -5,14 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity" >
+    tools:context=".MainActivity">
 
     <EditText
         android:id="@+id/txtNombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Nombre del producto:" >
-    <requestFocus/>
+        android:hint="Nombre del producto:">
+
+        <requestFocus />
     </EditText>
 
     <EditText
@@ -31,7 +32,7 @@
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sección;" />
+            android:text="Sección:" />
 
         <Spinner
             android:id="@+id/lstSeccion"
@@ -47,11 +48,11 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/btnGuardar"
+            android:id="@+id/btnInsertar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="guardarProducto"
-            android:text="Guardar"
+            android:onClick="insertarProducto"
+            android:text="Insertar"
             android:textSize="10sp" />
 
         <Button
@@ -83,7 +84,13 @@
         android:id="@+id/btnListar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="listarProducto"
+        android:onClick="listarProductos"
         android:text="LISTAR TODOS LOS PRODUCTOS"
         android:textSize="10sp" />
+
+    <EditText
+        android:id="@+id/txtResultados"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:inputType="textMultiLine" />
 </LinearLayout>
