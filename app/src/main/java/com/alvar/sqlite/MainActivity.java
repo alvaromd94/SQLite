@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
         if (strCantidad.equals("")) {
             mostrarMensaje("La cantidad es obligatoria.");
         } else {
-            String sql = "UPDATE PRODUCTO SET cantidad=" + Integer.parseInt(strCantidad) + ", seccion='" + strSeccion + "' WHERE nombre LIKE '" + strNombre + "'";
+            String sql = "UPDATE PRODUCTO SET cantidad=" +strCantidad + ", seccion='" + strSeccion + "' WHERE nombre LIKE '" + strNombre + "'";
 
             DB_SQLite db = new DB_SQLite(this);
             SQLiteDatabase conn = db.getWritableDatabase();
@@ -104,7 +104,6 @@ public class MainActivity extends AppCompatActivity {
             limpiarCuadros();
         }
     }
-
 
 
     public void buscarProducto(View view) {
